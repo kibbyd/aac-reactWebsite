@@ -6,10 +6,10 @@ function Footer(){
         <footer className="footer sticky-footer">
           <div className="container-fluid">
             <div className="row pt-2">
-                <div>
-                    <h2 className="text-white text-center pr-3" data-toggle="tooltip" data-placement="top" title="Click Facebook Icon">Join our Group <a className="btn btn-social-icon btn-facebook mb-1" target="_blank"
-                    href="https://www.facebook.com/groups/AACatfish/"><i className="fa fa-facebook" /></a></h2>
-                </div>
+            <div className="col">
+            <h2 className="text-white text-center pr-3" data-toggle="tooltip" data-placement="top" title="Click Facebook Icon">Join our Group <a class="btn btn-social-icon btn-facebook mb-1" target="_blank"
+            href="https://www.facebook.com/groups/AACatfish/"><i className="fa fa-facebook"/></a></h2>
+        </div>
             </div>            
             
             <div id="signature" className="row bg-dark py-2">
