@@ -9,12 +9,12 @@ function JoinMailingList(){
                 </div>
                 <div className="col-12 col-lg-auto">
                     <label className="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" className="form-control mb-2" id="inlineFormInput" placeholder="Name"/>
+                    <input type="text" className="form-control mb-2" id="name" name="name" placeholder="Name"/>
                 </div>
                 <div className="col-12 col-lg-auto">
                    <label className="sr-only" for="inlineFormInputGroup">Email</label>
                    <div className="input-group mb-2">
-                        <input type="text" className="form-control" id="inlineFormInputGroup" placeholder="Email"/>
+                        <input type="text" className="form-control" id="email" name="email" placeholder="Email"/>
                    </div>
                 </div>        
                 <div className="col-auto pb-2 pb-lg-0">
