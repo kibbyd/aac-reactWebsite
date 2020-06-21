@@ -18,10 +18,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Main from '../homePage/Main';
-import Schedule from '../pages/Schedule';
-import Rules from '../pages/Rules';
-import Contact from '../pages/Contact';
+import Main from '../main/main/Main';
+import Schedule from '../schedule/Schedule';
+import Register from '../register/Register';
+import Rules from '../rules/Rules';
+import Gallery from '../gallery/Gallery';
+import CommunityEvents from '../communityEvents/CommunityEvents';
+import Contact from '../contact/Contact';
+import './Navigation.css';
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +34,7 @@ const Navigation = (props) => {
 
   return (
     <Router>
-    <div className="">
+    <div className="navigation sticky-top">
       <Navbar color="light" light expand="md">
         <NavbarToggler onClick={toggle} className="ml-auto"/>
         <Collapse isOpen={isOpen} navbar>
@@ -43,18 +47,18 @@ const Navigation = (props) => {
                 Tournaments
               </DropdownToggle>
               <DropdownMenu right>
-                <Link to="/schedule"><DropdownItem>
+                <Link to="/Schedule"><DropdownItem>
                   Schedule
                 </DropdownItem></Link>
-                <DropdownItem>
+                <Link to="/Register"><DropdownItem>
                   Register
-                </DropdownItem>
-                <Link to="/rules"><DropdownItem>
+                </DropdownItem></Link>
+                <Link to="/Rules"><DropdownItem>
                   Rules
                 </DropdownItem></Link>
-                <DropdownItem>
+                <Link to="/Gallery"><DropdownItem>
                   Gallery
-                </DropdownItem>
+                </DropdownItem></Link>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
@@ -62,9 +66,9 @@ const Navigation = (props) => {
                 Community Events
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
+              <Link to="/CommunityEvents"><DropdownItem>
                   Schedule
-                </DropdownItem>
+                </DropdownItem></Link>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
@@ -74,7 +78,7 @@ const Navigation = (props) => {
               <NavLink href="#">Sponsor</NavLink>
             </NavItem>
             <NavItem>
-            <Link to="/contact"><NavLink>Contact</NavLink></Link>
+            <Link to="/Contact"><NavLink>Contact</NavLink></Link>
             </NavItem>
           </Nav>
         </Collapse>
@@ -85,13 +89,22 @@ const Navigation = (props) => {
           <Route exact path="/">
             <Main />
           </Route>
-          <Route path="/rules">
-            <Rules />
-          </Route>
-          <Route path="/schedule">
+          <Route path="/Schedule">
             <Schedule />
           </Route>
-          <Route path="/contact">
+          <Route path="/Rules">
+            <Rules />
+          </Route>
+          <Route path="/Register">
+            <Register />
+          </Route>
+          <Route path="/Gallery">
+            <Gallery />
+          </Route>
+          <Route path="/CommunityEvents">
+            <CommunityEvents />
+          </Route>          
+          <Route path="/Contact">
             <Contact />
           </Route>
         </Switch>

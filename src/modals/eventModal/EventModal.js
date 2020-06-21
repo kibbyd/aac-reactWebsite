@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button} from 'reactstrap';
-
+import './EventModal.css';
 
 const EventModal = (props) => { 
         return (

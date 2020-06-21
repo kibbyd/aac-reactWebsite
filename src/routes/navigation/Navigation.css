@@ -1,0 +1,18 @@
+a:hover {
+    text-decoration: none;
+}
+
+.dropdown-item {
+    font-family: 'Comfortaa', cursive;
+    font-size: 125%;
+}
+
+.navbar ul li {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+
+.navbar-collapse {
+    line-height: 1.5;
+    font-weight: 400;
+}

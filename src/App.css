@@ -4,11 +4,6 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
-footer {
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(29,9,121,0.9893091025472689) 44%, rgba(45,62,79,1) 100%); 
-}
-
 h2 {
     font-family: 'Comfortaa', cursive;    
 }
@@ -17,62 +12,4 @@ h3 {
     font-family: 'Comfortaa', cursive;
 }
 
-#signature {
-    border-top: #f8f9fa 1px solid;
-}
 
-.contact-textarea {
-    margin-left: 100px;
-}
-
-.dropdown-item {
-    font-family: 'Comfortaa', cursive;
-    font-size: 125%;
-}
-
-@media (max-width: 576px) { 
-    .facebook-join { 
-      font-size: 175%;
-      text-align: center;
-       }
-    }
-
-.form-label {
-    font-family: 'Comfortaa', cursive;
-    font-size: 170%;
-}
-
-.head-container {
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(29,9,121,0.9893091025472689) 44%, rgba(45,62,79,1) 100%);
-    padding: 10px 10px 10px 10px;
-}
-
-.modal-header {
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(29,9,121,0.9893091025472689) 44%, rgba(45,62,79,1) 100%); 
-    color: white;
-}
-
-.navbar ul li {
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
-}
-
-.newsletter {
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(29,9,121,0.9893091025472689) 44%, rgba(45,62,79,1) 100%); 
-}
-
-.section-title {
-    background-color: #f8f9fa;
-    font-family: 'Comfortaa', cursive;
-    font-size: 218.75%
-}
-
-.who-we-are {
-    font-size: 125%;
-}
-
-.link {
-    text-decoration: none;
-}

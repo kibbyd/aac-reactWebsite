@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import EventModal from '../modals/EventModal';
-import ReleaseModal from '../modals/ReleaseModal';
+import EventModal from '../../modals/eventModal/EventModal';
+import ReleaseModal from '../../modals/releaseModal/ReleaseModal';
 
-export default class Schedule extends Component { 
+export default class CommunityEvents extends Component { 
   constructor(props){
     super(props);
       this.state = {
