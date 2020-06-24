@@ -1,0 +1,13 @@
+.GalleryCard .btn-block {
+    width: 90%;
+}
+
+.GalleryCard .card {
+    border-radius: 2.5%;
+    height: 380.56px;
+    overflow: hidden;
+}
+
+.GalleryCard .card-body {
+    padding: 0;
+}

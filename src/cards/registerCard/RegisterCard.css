@@ -3,7 +3,9 @@
 }
 
 .RegisterCard .card {
+    border-radius: 2.5%;
     height: 463.09px;
+    overflow: hidden;
 }
 
 .RegisterCard .card-body {

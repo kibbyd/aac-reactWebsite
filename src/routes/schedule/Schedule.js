@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EventModal from '../../modals/eventModal/EventModal';
 import ReleaseModal from '../../modals/releaseModal/ReleaseModal';
+import { Container, Col, Row } from 'react-bootstrap';
 
 export default class Schedule extends Component { 
   constructor(props){
@@ -83,15 +84,15 @@ this.setState({
 
     render(){
       return(
-        <div className="container">
-          <div className="row">
-              <div className="col mt-3">
+        <Container>
+          <Row>
+              <Col className="mt-3">
                   <h2>Tournament Schedule</h2>
                   <hr/>
-              </div>
-          </div>
-          <div className="row">
-              <div className="col mb-3">    
+              </Col>
+          </Row>
+          <Row>
+              <Col className="mb-3">    
                   <table className="table table-striped table-responsive">
                       <thead>
                         <tr>
@@ -130,8 +131,8 @@ this.setState({
                         </tr>
                       </tbody>
                   </table>
-              </div>
-          </div>      
+              </Col>
+          </Row>      
 
           <EventModal open={this.state.isEventModal1Open} close={() => this.toggleEventModal1()} event="Perry Reservoir, KS" placeHolder="$30" fullPayment="$120" modalState={this.state.isEventModal1Open}/>
           <EventModal open={this.state.isEventModal2Open} close={() => this.toggleEventModal2()} event="Cheny Reservoir Cats, KS" placeHolder="$40" fullPayment="$160" modalState={this.state.isEventModal2Open}/>
@@ -141,7 +142,7 @@ this.setState({
           <ReleaseModal open={this.state.isReleaseModal2Open} close={() => this.toggleReleaseModal2()} openEvent={() => this.toggleEventModal2()}/>
           <ReleaseModal open={this.state.isReleaseModal3Open} close={() => this.toggleReleaseModal3()} openEvent={() => this.toggleEventModal3()}/>
 
-        </div>
+        </Container>
     );
   }
 }

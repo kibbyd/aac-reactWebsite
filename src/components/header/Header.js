@@ -3,7 +3,6 @@ import './Header.css';
 
 function Header(){
     return(
-        <React.Fragment>
             <header>
                 <div className="container-fluid head-container">
                     <div className="row d-flex justify-content-center">
@@ -13,7 +12,6 @@ function Header(){
                     </div>
                 </div>
             </header>
-        </React.Fragment>
     );
 }
 

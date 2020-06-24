@@ -5,7 +5,7 @@ import ImageBlock from '../imageBlock/ImageBlock';
 import WhoWeAre from '../whoWeAre/WhoWeAre';
 import JoinMailingList from '../joinMailingList/JoinMailingList';
 
-function Main(){
+const Main = () => {
     return(
     <React.Fragment>
         <MainCarousel />

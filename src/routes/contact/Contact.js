@@ -1,42 +1,41 @@
 import React from 'react';
 import './Contact.css';
+import { Container, Col, Row } from 'react-bootstrap';
 
-export default function Contact (){
+const Contact = () => {
     return(
         <React.Fragment>
-            <div className="container">   
-                <div className="row">
-                    <div className="col mt-3">
+            <Container>   
+                <Row>
+                    <Col className="mt-3">
                         <h2>Contact Us</h2> 
                         <hr />           
-                    </div>
-                </div>                  
+                    </Col>
+                </Row>                  
 
-                <div className="row row-content align-items-center">
-                    <div className="col-sm-4">
+                <Row className="align-items-center">
+                    <Col className="col-sm-4">
                         <h5>Our Address</h5>
                         <address>
                             PO BOX 195,<br/>
                             Edgerton,<br/> 
                             Kansas 66021 
                         </address>
-                    </div>
-                    <div className="col">
-                        <a role="button" className="btn btn-link" href="tel:+1913864462"><i className="fa fa-phone fa-lg text-primary"/>
-                            (913)-486-4462</a><br/>
-                        <a role="button" className="btn btn-link" href="mailto:AACatfish@outlook.com"><i
-                            className="fa fa-envelope-o fa-lg text-primary"/> AACatfish@outlook.com</a>
-                    </div>
-                </div>   
+                    </Col>
+                    <Col>
+                        <a role="button" className="btn btn-link" href="tel:+1913864462"><i className="fa fa-phone fa-lg text-primary"/> (913)-486-4462</a><br/>
+                        <a role="button" className="btn btn-link" href="mailto:AACatfish@outlook.com"><i className="fa fa-envelope-o fa-lg text-primary"/> AACatfish@outlook.com</a>
+                    </Col>
+                </Row>   
 
-                <div className="row row-content">
-                    <div className="col-12 mt-3">
+                <Row>
+                    <Col className="mt-3">
                     <h2>Send us your Feedback</h2>
                     <hr/>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
 
-                <div className="col-md-10">
+                <Col className="col-md-10">
                     <form>
                         <div className="form-group row">
                             <label for="firstName" className="col-md-2 col-form-label">First Name</label>
@@ -78,9 +77,11 @@ export default function Contact (){
                         </div>
                         </div>
                     </form>
-                </div>
+                </Col>
 
-            </div>    
+            </Container>    
         </React.Fragment>
     );
 }
+
+export default Contact;

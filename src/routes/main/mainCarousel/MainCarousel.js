@@ -3,22 +3,22 @@ import { UncontrolledCarousel } from 'reactstrap';
 
 const items = [
     {
-        id: 1,
+        id: 0,
         altText: 'Slide 1',
         src: require('../../../assets/images/homePageCarousel/tv-image-1.jpg')
       },
       {
-        id: 2,
+        id: 1,
         altText: 'Slide 2',
         src: require('../../../assets/images/homePageCarousel/tv-image-2.jpg')
       },
       {
-        id: 3,
+        id: 2,
         altText: 'Slide 3',
         src: require('../../../assets/images/homePageCarousel/tv-image-3.jpg')
       },
       {
-        id: 4,
+        id: 3,
         altText: 'Slide 4',
         src: require('../../../assets/images/homePageCarousel/tv-image-4.jpg')
       }

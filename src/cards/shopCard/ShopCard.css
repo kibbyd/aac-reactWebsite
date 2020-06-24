@@ -1,0 +1,13 @@
+
+.ShopCard .card {
+    border-radius: 2.5%;
+    overflow: hidden;
+}
+
+.ShopCard .card-body {
+    padding: 0;
+}
+
+.ShopCard .card img {
+    height: 276.93px;
+}

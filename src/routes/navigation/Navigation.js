@@ -24,10 +24,12 @@ import Register from '../register/Register';
 import Rules from '../rules/Rules';
 import Gallery from '../gallery/Gallery';
 import CommunityEvents from '../communityEvents/CommunityEvents';
+import Sponsor from '../sponsor/Sponsor';
+import Shop from '../shop/Shop';
 import Contact from '../contact/Contact';
 import './Navigation.css';
 
-const Navigation = (props) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -72,10 +74,10 @@ const Navigation = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="#">Shop</NavLink>
+            <Link to="/Shop"><NavLink>Shop</NavLink></Link>
             </NavItem>
             <NavItem>
-              <NavLink href="#">Sponsor</NavLink>
+            <Link to="/Sponsor"><NavLink>Sponsor</NavLink></Link>
             </NavItem>
             <NavItem>
             <Link to="/Contact"><NavLink>Contact</NavLink></Link>
@@ -103,7 +105,13 @@ const Navigation = (props) => {
           </Route>
           <Route path="/CommunityEvents">
             <CommunityEvents />
-          </Route>          
+          </Route>   
+          <Route path="/Sponsor">
+            <Sponsor />
+          </Route> 
+          <Route path="/Shop">
+            <Shop />
+          </Route>            
           <Route path="/Contact">
             <Contact />
           </Route>
