@@ -1,23 +1,7 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from 'react';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Main from '../main/main/Main';
 import Schedule from '../schedule/Schedule';
 import Register from '../register/Register';
@@ -30,91 +14,60 @@ import Contact from '../contact/Contact';
 import './Navigation.css';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <Router>
-    <div className="navigation sticky-top">
-      <Navbar color="light" light expand="md">
-        <NavbarToggler onClick={toggle} className="ml-auto"/>
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mx-auto" navbar>
-            <NavItem>
-            <Link to="/"><NavLink>Home</NavLink></Link>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Tournaments
-              </DropdownToggle>
-              <DropdownMenu right>
-                <Link to="/Schedule"><DropdownItem>
-                  Schedule
-                </DropdownItem></Link>
-                <Link to="/Register"><DropdownItem>
-                  Register
-                </DropdownItem></Link>
-                <Link to="/Rules"><DropdownItem>
-                  Rules
-                </DropdownItem></Link>
-                <Link to="/Gallery"><DropdownItem>
-                  Gallery
-                </DropdownItem></Link>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Community Events
-              </DropdownToggle>
-              <DropdownMenu right>
-              <Link to="/CommunityEvents"><DropdownItem>
-                  Schedule
-                </DropdownItem></Link>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <NavItem>
-            <Link to="/Shop"><NavLink>Shop</NavLink></Link>
-            </NavItem>
-            <NavItem>
-            <Link to="/Sponsor"><NavLink>Sponsor</NavLink></Link>
-            </NavItem>
-            <NavItem>
-            <Link to="/Contact"><NavLink>Contact</NavLink></Link>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+      <React.Fragment>
+        <Navbar bg="light" expand="md" sticky="top" >
+          <Navbar.Toggle aria-controls="mainNav" className="ml-auto"/>
+          <Navbar.Collapse id="mainNav">
+            <Nav className="mx-auto">
+              <LinkContainer exact to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <NavDropdown title="Tournaments">
+                  <LinkContainer exact to="/Schedule">
+                    <NavDropdown.Item>Schedule</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer exact to="/Register">
+                    <NavDropdown.Item>Register</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer exact to="/Rules">
+                    <NavDropdown.Item>Rules</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer exact to="/Gallery">
+                    <NavDropdown.Item>Gallery</NavDropdown.Item>
+                  </LinkContainer>
+              </NavDropdown>
+              <NavDropdown title="Community Events">
+                <LinkContainer exact to="/CommunityEvents">
+                  <NavDropdown.Item>Schedule</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
+              <LinkContainer exact to="/Shop">
+                <Nav.Link>Shop</Nav.Link>
+              </LinkContainer>
+              <LinkContainer exact to="/Sponsor">
+                <Nav.Link>Sponsor</Nav.Link>
+              </LinkContainer>
+              <LinkContainer exact to="/Contact">
+                <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+    </React.Fragment>
 
     <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route path="/Schedule">
-            <Schedule />
-          </Route>
-          <Route path="/Rules">
-            <Rules />
-          </Route>
-          <Route path="/Register">
-            <Register />
-          </Route>
-          <Route path="/Gallery">
-            <Gallery />
-          </Route>
-          <Route path="/CommunityEvents">
-            <CommunityEvents />
-          </Route>   
-          <Route path="/Sponsor">
-            <Sponsor />
-          </Route> 
-          <Route path="/Shop">
-            <Shop />
-          </Route>            
-          <Route path="/Contact">
-            <Contact />
-          </Route>
+          <Route exact path="/" component={Main} />
+          <Route path="/Schedule" component={Schedule} />
+          <Route path="/Rules" component={Rules} />
+          <Route path="/Register" component={Register} />
+          <Route path="/Gallery" component={Gallery} />
+          <Route path="/CommunityEvents" component={CommunityEvents} />  
+          <Route path="/Sponsor" component={Sponsor} />
+          <Route path="/Shop" component={Shop} />       
+          <Route path="/Contact" component={Contact} />
         </Switch>
     </Router>
   );

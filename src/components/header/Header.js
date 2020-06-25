@@ -1,16 +1,17 @@
 import React from 'react'; 
 import './Header.css';
+import { Row, Col, Container } from 'react-bootstrap';
 
-function Header(){
+const Header = () => {
     return(
             <header>
-                <div className="container-fluid head-container">
-                    <div className="row d-flex justify-content-center">
-                        <div className="col-6 col-sm-2">
+                <Container fluid className="head-container">
+                    <Row className="d-flex justify-content-center">
+                        <Col xs={5} sm={2}>
                             <img src={require("../../assets/images/aac-logo.png")} width="175px" alt="logo" />
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </header>
     );
 }
