@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button} from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import './EventModal.css';
 
 const EventModal = (props) => { 
@@ -8,17 +9,17 @@ const EventModal = (props) => {
             <ModalHeader toggle={props.close}>{props.event} Event</ModalHeader>
             <ModalBody>
               <form>
-                <div className="form-group row">
+                <Row className="form-group">
                   <label className="col-sm-6 col-form-label" for="numAnglers">Number of Anglers</label>
-                  <div className="col col-sm-6">
+                  <Col xs={12} sm={6}>
                     <select className="col form-control" name="numAnglers" id="numAnglers">
                       <option className="text-muted">Select...</option>
                       <option value="1">1</option>
                       <option value="2">2</option> 
                       <option value="3">3</option>
                     </select>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
   
                 <div className="form-group row">
                   <label className="col-sm-6 col-form-label" for="boatCaptain">Boat Captain:</label>

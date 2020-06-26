@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ImageBlock(props){
+const ImageBlock = (props) => {
     return(
         <div className="row row-content">
             <div className="col py-1">

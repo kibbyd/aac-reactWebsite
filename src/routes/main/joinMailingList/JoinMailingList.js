@@ -1,6 +1,6 @@
 import React from 'react';
 
-function JoinMailingList(){
+const JoinMailingList = () => {
     return(
         <form>
             <div className="form-row d-flex justify-content-center pt-2 border-top border-bottom">

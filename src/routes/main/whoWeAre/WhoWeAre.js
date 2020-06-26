@@ -1,10 +1,11 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import './WhoWeAre.css';
 
-function WhoWeAre(){
+const WhoWeAre = () => {
     return(
-        <div className="row row-content">
-        <div className="col py-2 who-we-are text-center">
+        <Row>
+        <Col className="py-2 who-we-are text-center">
           <p>All American Catfish Tournaments are friendly events where new and professional anglers can come together and
             compete.</p>
           <p>We are more than a Tournament series, we are a community and we are always growing.</p>
@@ -14,8 +15,8 @@ function WhoWeAre(){
           <p>You are always welcome to post your fishing questions in our <a
               href="https://www.facebook.com/groups/AACatfish/">Facebook</a> group too.</p>
           <p>If you've never fished a Tournament and would like to, just let us know so we can help you get ready.</p>
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
 }
 

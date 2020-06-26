@@ -1,3 +1,7 @@
 .who-we-are {
     font-size: 125%;
 }
+
+.who-we-are a {
+    color: blue;
+}

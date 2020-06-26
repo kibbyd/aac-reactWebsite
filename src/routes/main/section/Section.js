@@ -1,13 +1,14 @@
 import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 import './Section.css';
 
-function Section(props){
+const Section = (props) => {
     return(        
-            <div className="row section-title pt-2 border-top border-bottom">
-                <div className="col d-flex justify-content-center">
+            <Row className="section-title pt-2 border-top border-bottom">
+                <Col className="col d-flex justify-content-center">
                     <h2>{props.title}</h2>
-                </div>
-            </div>
+                </Col>
+            </Row>
     );
 }
 

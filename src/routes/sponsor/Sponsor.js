@@ -1,8 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, Button, Accordion, Container, Col, Row} from 'react-bootstrap';
+import SponsorModal from '../../modals/sponsorModal/SponsorModal';
 
 
-const Sponsor = () => {
+export default class Sponsor extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            isSponsorModal1Open: false,
+            isSponsorModal2Open: false,
+            isSponsorModal3Open: false,
+            isSponsorModal4Open: false
+        }
+    }
+
+    toggleSponsorModal1() {
+        this.setState({
+            isSponsorModal1Open: !this.state.isSponsorModal1Open
+        });
+      } 
+
+      toggleSponsorModal2() {
+        this.setState({
+            isSponsorModal2Open: !this.state.isSponsorModal2Open
+        });
+      } 
+
+      toggleSponsorModal3() {
+        this.setState({
+            isSponsorModal3Open: !this.state.isSponsorModal3Open
+        });
+      } 
+
+      toggleSponsorModal4() {
+        this.setState({
+            isSponsorModal4Open: !this.state.isSponsorModal4Open
+        });
+      } 
+
+    render(){
     return(
         <Container>
             <Row>
@@ -94,6 +130,9 @@ const Sponsor = () => {
                                 <li>Special media opportunities for title sponsors will be made available at all events & activities.
                                 This includes live social media segments, speaking opportunities, and interviews</li>
                             </ul> 
+                            <Col xs={12} className="d-flex justify-content-center">                  
+                                <Button variant="primary" className="btn-lg" onClick={() => this.toggleSponsorModal1()}>Give Now</Button>
+                             </Col>  
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -127,6 +166,9 @@ const Sponsor = () => {
                                 <li>Sponsor representation on winner’s trophies and prominent recognition at awards ceremony during
                                 presentation. </li>
                             </ul>
+                            <Col xs={12} className="d-flex justify-content-center">                  
+                                <Button variant="primary" className="btn-lg" onClick={() => this.toggleSponsorModal2()}>Give Now</Button>
+                            </Col>  
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -153,6 +195,9 @@ const Sponsor = () => {
                                 <li>Special media opportunities for the Captain’s Dinner sponsor will be made available.This includes
                                 a primary speaking opportunity at the Captain’s Dinner. </li>
                             </ul>
+                            <Col xs={12} className="d-flex justify-content-center">                  
+                                <Button variant="primary" className="btn-lg" onClick={() => this.toggleSponsorModal3()}>Give Now</Button>
+                            </Col>  
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -166,13 +211,21 @@ const Sponsor = () => {
                         <Card.Body>
                             <p>We are so grateful for all our sponsors whether they are able to give a little or a lot.</p>
                             <p>Any contribution we receive goes towards ensuring we are able to continue to deliver exciting, enjoyable and family friendly cat fishing tournaments.</p>
+                            <Col xs={12} className="d-flex justify-content-center">                  
+                                <Button variant="primary" className="btn-lg" onClick={() => this.toggleSponsorModal4()}>Give Now</Button>
+                             </Col>  
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
-            </Accordion>                     
+            </Accordion>    
+
+            <SponsorModal sponsorType="a Title" modalState={this.state.isSponsorModal1Open} close={() => this.toggleSponsorModal1()} />
+            <SponsorModal sponsorType="an Associate" modalState={this.state.isSponsorModal2Open} close={() => this.toggleSponsorModal2()} />                        
+            <SponsorModal sponsorType="a Captain's Dinner" modalState={this.state.isSponsorModal3Open} close={() => this.toggleSponsorModal3()} />
+            <SponsorModal sponsorType="an In-Kind" modalState={this.state.isSponsorModal4Open} close={() => this.toggleSponsorModal4()} />
+
         </Container>
         
     );
 }
-
-export default Sponsor;
+}
