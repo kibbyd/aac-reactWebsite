@@ -4,7 +4,7 @@ import Footer from './components/footer/Footer';
 import Navigation from './routes/navigation/Navigation';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <React.Fragment>
       <Header />

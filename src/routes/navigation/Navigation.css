@@ -3,11 +3,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: none;
-    color: rgba(0,0,0,.9);
-}
-
 a:active {
     background-color: rgba(0,0,0,.5);
 }
@@ -25,12 +20,6 @@ a:active {
     color: rgba(0,0,0,.9);
 }
 
-#mainNav .nav-item .dropdown-menu  {
-    font-family: 'Comfortaa', cursive;
-    font-size: 125%;
-    color: rgba(0,0,0,.9);
-}
-
 #mainNav .nav-item .dropdown-menu a:active  {
     background-color: #f8f9fa;
     color: rgba(0,0,0,.9);
@@ -38,4 +27,8 @@ a:active {
 
 .dropdown-item.active {
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(29,9,121,0.9893091025472689) 44%, rgba(45,62,79,1) 100%);
+}
+
+.navbar-collapse .dropdown-menu .dropdown-item {
+    font-size: 20px;
 }
